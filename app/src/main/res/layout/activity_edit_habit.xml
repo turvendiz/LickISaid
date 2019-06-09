@@ -1,11 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#64be87">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditHabitActivity">
 
+    <ImageButton
+        android:id="@+id/fabColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="72dp"
+        android:background="@null"
+        android:src="@drawable/ic_circle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/textColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_toEndOf="@+id/fabColor"
+        android:text="Цвет"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/fabColor"
+        app:layout_constraintStart_toEndOf="@+id/fabColor"
+        app:layout_constraintTop_toTopOf="@+id/fabColor" />
 
+    <ImageButton
+        android:id="@+id/fabPeriod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@null"
+        android:src="@drawable/ic_calendar"
+        app:layout_constraintEnd_toEndOf="@+id/fabColor"
+        app:layout_constraintStart_toStartOf="@+id/fabColor"
+        app:layout_constraintTop_toBottomOf="@+id/fabColor" />
 
-</RelativeLayout>
+    <TextView
+        android:id="@+id/textPeriod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_toEndOf="@+id/fabColor"
+        android:text="Периодичность"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/fabPeriod"
+        app:layout_constraintStart_toEndOf="@+id/fabPeriod"
+        app:layout_constraintTop_toTopOf="@+id/fabPeriod" />
+
+    <ImageButton
+        android:id="@+id/fabRemind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@null"
+        android:src="@drawable/ic_reminder"
+        app:layout_constraintEnd_toEndOf="@+id/fabPeriod"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/fabPeriod"
+        app:layout_constraintTop_toBottomOf="@+id/fabPeriod" />
+
+    <TextView
+        android:id="@+id/textRemind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_toEndOf="@+id/fabColor"
+        android:text="Напоминание"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/fabRemind"
+        app:layout_constraintStart_toEndOf="@+id/fabRemind"
+        app:layout_constraintTop_toTopOf="@+id/fabRemind" />
+
+</android.support.constraint.ConstraintLayout>
